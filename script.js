@@ -41,14 +41,18 @@ const translations = {
       contact: "Contato",
     },
     hero: {
-      eyebrow: "TCC • Acessibilidade • Rotinas Visuais",
+      eyebrow: "Acessibilidade • Rotinas Visuais",
       tagline:
         "Rotinas previsíveis e visuais para apoiar crianças neurodivergentes.",
       desc: "Um aplicativo mobile para pais, cuidadores e educadores criarem atividades estruturadas — ajudando a reduzir ansiedade, melhorar transições e dar mais autonomia no dia a dia.",
       cta: "Participar da Validação do App",
       note: "Leva menos de 2 minutos para se cadastrar como tester.",
       videoLabel: "Apresentação do App",
-      videoAria: "Vídeo de demonstração do Apoio Diário",
+      videoAria: "Área do vídeo de apresentação do Apoio Diário",
+      videoStatus: "Em andamento",
+      videoPlaceholderTitle: "Vídeo de apresentação em andamento",
+      videoPlaceholderDesc:
+        "Estamos preparando uma demonstração do app para publicar aqui em breve.",
     },
     problem: {
       title: "O desafio das rotinas no dia a dia",
@@ -156,8 +160,6 @@ const translations = {
     },
     preview: {
       title: "Prévia do app",
-      subtitle:
-        "Alguns exemplos de telas (placeholders). Você poderá substituir pelas capturas reais depois.",
       shots: {
         routine: "Rotina do dia",
         activity: "Atividade com etapas",
@@ -170,7 +172,7 @@ const translations = {
         "O projeto está em fase de validação. Pais, cuidadores e educadores podem testar o app e enviar feedback.",
       bullets: {
         0: "Você ajuda a melhorar acessibilidade e usabilidade.",
-        1: "Seu feedback orienta decisões do TCC.",
+        1: "Seu feedback nos ajuda a validar o app.",
         2: "Participação rápida e gratuita.",
       },
       cta: "Quero Testar o App",
@@ -179,7 +181,7 @@ const translations = {
     about: {
       title: "Sobre o projeto",
       subtitle:
-        "Um TCC focado em acessibilidade e apoio para crianças neurodivergentes (TEA, TDAH e deficiências intelectuais).",
+        "Um app focado em acessibilidade e apoio para crianças neurodivergentes (TEA, TDAH e deficiências intelectuais).",
       mission: {
         title: "Objetivo",
         desc: "Melhorar organização de rotinas, previsibilidade e autonomia com tarefas visuais e atividades estruturadas.",
@@ -197,7 +199,7 @@ const translations = {
       cta: "Enviar Email",
     },
     footer: {
-      tagline: "TCC • Rotinas visuais para apoio no dia a dia",
+      tagline: "Rotinas visuais para apoio no dia a dia",
       validation: "Validação",
       contact: "Contato",
       github: "GitHub",
@@ -224,14 +226,18 @@ const translations = {
       contact: "Contact",
     },
     hero: {
-      eyebrow: "Final project • Accessibility • Visual routines",
+      eyebrow: "Accessibility • Visual routines",
       tagline:
         "Predictable, visual routines to support neurodivergent children.",
       desc: "A mobile app for parents, caregivers, and educators to create structured activities — helping reduce anxiety, improve transitions, and build daily independence.",
       cta: "Join the App Validation",
       note: "It takes less than 2 minutes to sign up as a tester.",
       videoLabel: "App presentation",
-      videoAria: "Apoio Diário demo video",
+      videoAria: "Apoio Diário presentation video area",
+      videoStatus: "In progress",
+      videoPlaceholderTitle: "Presentation video in progress",
+      videoPlaceholderDesc:
+        "We are preparing an app walkthrough to publish here soon.",
     },
     problem: {
       title: "Daily routines can be challenging",
@@ -338,8 +344,6 @@ const translations = {
     },
     preview: {
       title: "App preview",
-      subtitle:
-        "A few screen examples (placeholders). You can replace them with real screenshots later.",
       shots: {
         routine: "Daily routine",
         activity: "Activity steps",
@@ -352,7 +356,7 @@ const translations = {
         "The project is currently being validated. Parents and educators can test the app and share feedback.",
       bullets: {
         0: "Help improve accessibility and usability.",
-        1: "Your feedback supports final project decisions.",
+        1: "Your feedback helps us validate the app.",
         2: "Quick, free participation.",
       },
       cta: "I want to test the app",
@@ -361,7 +365,7 @@ const translations = {
     about: {
       title: "About the project",
       subtitle:
-        "A university final project focused on accessibility and support for neurodivergent children (ASD, ADHD, and intellectual disabilities).",
+        "An app focused on accessibility and support for neurodivergent children (ASD, ADHD, and intellectual disabilities).",
       mission: {
         title: "Goal",
         desc: "Improve routine organization, predictability, and independence with visual tasks and structured activities.",
@@ -379,7 +383,7 @@ const translations = {
       cta: "Send email",
     },
     footer: {
-      tagline: "Final project • Visual routines for daily support",
+      tagline: "Visual routines for daily support",
       validation: "Validation",
       contact: "Contact",
       github: "GitHub",
