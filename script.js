@@ -1,6 +1,6 @@
 const CONFIG = {
   GOOGLE_FORMS_URL: "https://forms.gle/tfx29Uk6wMihBeGf8",
-  CONTACT_EMAIL: "apoiodiariotcc@gmail.com",
+  CONTACT_EMAIL: "apoiodiario.app@gmail.com",
   FOOTER: {
     university: "Instituto Federal de Pernambuco - IFPE",
     authors: [
