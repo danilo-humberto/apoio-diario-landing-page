@@ -730,6 +730,18 @@ img {
   color: var(--muted-soft);
 }
 
+.inline-link {
+  color: #1e5f95;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 3px;
+}
+
+.inline-link:hover {
+  color: #153f66;
+}
+
 /* About */
 .about-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -783,6 +795,11 @@ img {
   line-height: 1.6;
 }
 
+.validation-privacy {
+  margin: 10px 0 0;
+  line-height: 1.6;
+}
+
 .validation-bullets {
   grid-column: 1 / -1;
   display: grid;
@@ -823,6 +840,100 @@ img {
 
 .contact-email {
   font-weight: 500;
+}
+
+/* Privacy */
+.privacy-main {
+  padding-bottom: 72px;
+}
+
+.privacy-hero {
+  padding: 72px 0 28px;
+}
+
+.privacy-back-link {
+  display: inline-flex;
+  margin-bottom: 24px;
+  color: #1e5f95;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.privacy-back-link:hover {
+  color: #153f66;
+}
+
+.privacy-eyebrow {
+  margin: 0 0 10px;
+  color: var(--muted-soft);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.privacy-title {
+  max-width: 920px;
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.08;
+}
+
+.privacy-updated {
+  margin-top: 14px;
+}
+
+.privacy-content {
+  max-width: 900px;
+}
+
+.privacy-locale-en {
+  display: none;
+}
+
+html[lang="en"] .privacy-locale-pt {
+  display: none;
+}
+
+html[lang="en"] .privacy-locale-en {
+  display: block;
+}
+
+.privacy-section {
+  padding: 30px 0;
+  border-top: 1px solid var(--border);
+}
+
+.privacy-section:first-child {
+  border-top: 0;
+}
+
+.privacy-section h2 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.privacy-section p {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.privacy-section p:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-section strong {
+  color: var(--text);
+}
+
+.privacy-list {
+  margin: 0 0 16px;
+  padding-left: 22px;
+  color: var(--muted);
+}
+
+.privacy-list li + li {
+  margin-top: 8px;
 }
 
 /* Footer */
@@ -1070,6 +1181,26 @@ img {
 
   .validation-actions {
     padding: 20px;
+  }
+
+  .privacy-main {
+    padding-bottom: 48px;
+  }
+
+  .privacy-hero {
+    padding: 52px 0 18px;
+  }
+
+  .privacy-title {
+    font-size: 34px;
+  }
+
+  .privacy-section {
+    padding: 24px 0;
+  }
+
+  .privacy-section h2 {
+    font-size: 21px;
   }
 
   .footer-top {

@@ -177,6 +177,9 @@ const translations = {
       },
       cta: "Quero Testar o App",
       meta: "Abre um formulário no Google Forms em uma nova aba.",
+      privacyNote:
+        "Ao participar da validação, você poderá informar dados conforme nossa",
+      privacyLink: "Política de Privacidade",
     },
     about: {
       title: "Sobre o projeto",
@@ -198,10 +201,20 @@ const translations = {
       meta: "Abrirá seu cliente de email padrão.",
       cta: "Enviar Email",
     },
+    privacy: {
+      pageTitle: "Política de Privacidade e Consentimento | Apoio Diário",
+      metaDescription:
+        "Política de Privacidade e Consentimento do Apoio Diário para a fase de pesquisa e validação do aplicativo.",
+      back: "Voltar para a página inicial",
+      eyebrow: "Apoio Diário",
+      title: "Política de Privacidade e Consentimento",
+      updated: "Última atualização: 25 de junho de 2026",
+    },
     footer: {
       tagline: "Rotinas visuais para apoio no dia a dia",
       validation: "Validação",
       contact: "Contato",
+      privacy: "Política de Privacidade",
       github: "GitHub",
       linkedin: "LinkedIn",
       authorsLabel: "Autores:",
@@ -361,6 +374,9 @@ const translations = {
       },
       cta: "I want to test the app",
       meta: "Opens a Google Forms link in a new tab.",
+      privacyNote:
+        "By joining the validation, you may provide data according to our",
+      privacyLink: "Privacy Policy",
     },
     about: {
       title: "About the project",
@@ -382,10 +398,20 @@ const translations = {
       meta: "Opens your default email client.",
       cta: "Send email",
     },
+    privacy: {
+      pageTitle: "Privacy Policy and Consent | Apoio Diário",
+      metaDescription:
+        "Privacy Policy and Consent for Apoio Diário's research and app validation phase.",
+      back: "Back to home page",
+      eyebrow: "Apoio Diário",
+      title: "Privacy Policy and Consent",
+      updated: "Last updated: June 25, 2026",
+    },
     footer: {
       tagline: "Visual routines for daily support",
       validation: "Validation",
       contact: "Contact",
+      privacy: "Privacy Policy",
       github: "GitHub",
       linkedin: "LinkedIn",
       authorsLabel: "Authors:",
@@ -439,6 +465,11 @@ async function loadComponent(targetSelector, url) {
 
 async function loadPage() {
   await loadComponent("#header", "./components/header.html");
+
+  if (document.body.dataset.page === "privacy") {
+    await loadComponent("#footer", "./components/footer.html");
+    return;
+  }
 
   const main = document.querySelector("#main");
   if (!main) return;
@@ -511,17 +542,35 @@ function initSmoothScroll() {
 
     const id = link.getAttribute("data-scroll-to");
     if (!id) return;
-    e.preventDefault();
 
     if (id === "top") {
+      const target = document.getElementById("top");
+      if (!target) return;
+      e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
     const target = document.getElementById(id);
     if (!target) return;
+    e.preventDefault();
 
     target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+function scrollToInitialHash() {
+  const id = window.location.hash.replace("#", "");
+  if (!id) return;
+
+  requestAnimationFrame(() => {
+    if (id === "top") {
+      if (document.getElementById("top")) window.scrollTo({ top: 0 });
+      return;
+    }
+
+    const target = document.getElementById(id);
+    if (target) target.scrollIntoView({ block: "start" });
   });
 }
 
@@ -601,6 +650,7 @@ async function main() {
   initSmoothScroll();
   initMobileNav();
   initReveal();
+  scrollToInitialHash();
 }
 
 main().catch((err) => {
