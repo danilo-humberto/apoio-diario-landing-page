@@ -1,5 +1,6 @@
 const CONFIG = {
-  GOOGLE_FORMS_URL: "https://forms.gle/tfx29Uk6wMihBeGf8",
+  GOOGLE_PLAY_URL:
+    "https://play.google.com/store/apps/details?id=com.cauta.apoiodiario.android&hl=pt_BR",
   CONTACT_EMAIL: "apoiodiario.app@gmail.com",
   FOOTER: {
     university: "Instituto Federal de Pernambuco - IFPE",
@@ -45,8 +46,7 @@ const translations = {
       tagline:
         "Rotinas previsíveis e visuais para apoiar crianças neurodivergentes.",
       desc: "Um aplicativo mobile para pais, cuidadores e educadores criarem atividades estruturadas — ajudando a reduzir ansiedade, melhorar transições e dar mais autonomia no dia a dia.",
-      cta: "Participar da Validação do App",
-      note: "Leva menos de 2 minutos para se cadastrar como tester.",
+      cta: "Baixar o app",
       videoLabel: "Apresentação do App",
       videoAria: "Área do vídeo de apresentação do Apoio Diário",
       videoStatus: "Em andamento",
@@ -167,19 +167,26 @@ const translations = {
       },
     },
     validation: {
-      title: "Ajude a validar o Apoio Diário",
+      title: "O Apoio Diário já está disponível",
       subtitle:
-        "O projeto está em fase de validação. Pais, cuidadores e educadores podem testar o app e enviar feedback.",
-      bullets: {
-        0: "Você ajuda a melhorar acessibilidade e usabilidade.",
-        1: "Seu feedback nos ajuda a validar o app.",
-        2: "Participação rápida e gratuita.",
+        "Baixe o app no Google Play e comece a criar rotinas visuais. A versão para iPhone está em processo de publicação na App Store.",
+      cta: "Baixar no Google Play",
+      meta: "Disponível para dispositivos Android.",
+      availability: {
+        android: {
+          title: "Disponível no Android",
+          description: "Baixe agora pelo Google Play.",
+        },
+        ios: {
+          title: "Versão para iPhone",
+          description: "Publicação na App Store em andamento.",
+        },
+        feedback: {
+          title: "Ajude a melhorar o app",
+          description: "Envie sugestões com base na sua experiência.",
+          cta: "Enviar feedback",
+        },
       },
-      cta: "Quero Testar o App",
-      meta: "Abre um formulário no Google Forms em uma nova aba.",
-      privacyNote:
-        "Ao participar da validação, você poderá informar dados conforme nossa",
-      privacyLink: "Política de Privacidade",
     },
     about: {
       title: "Sobre o projeto",
@@ -196,8 +203,7 @@ const translations = {
     },
     contact: {
       title: "Contato",
-      subtitle:
-        "Quer participar, sugerir melhorias ou tirar dúvidas? Fale com a gente.",
+      subtitle: "Quer sugerir melhorias ou tirar dúvidas? Fale com a gente.",
       meta: "Abrirá seu cliente de email padrão.",
       cta: "Enviar Email",
     },
@@ -243,8 +249,7 @@ const translations = {
       tagline:
         "Predictable, visual routines to support neurodivergent children.",
       desc: "A mobile app for parents, caregivers, and educators to create structured activities — helping reduce anxiety, improve transitions, and build daily independence.",
-      cta: "Join the App Validation",
-      note: "It takes less than 2 minutes to sign up as a tester.",
+      cta: "Download the app",
       videoLabel: "App presentation",
       videoAria: "Apoio Diário presentation video area",
       videoStatus: "In progress",
@@ -364,19 +369,26 @@ const translations = {
       },
     },
     validation: {
-      title: "Help validate Apoio Diário",
+      title: "Apoio Diário is now available",
       subtitle:
-        "The project is currently being validated. Parents and educators can test the app and share feedback.",
-      bullets: {
-        0: "Help improve accessibility and usability.",
-        1: "Your feedback helps us validate the app.",
-        2: "Quick, free participation.",
+        "Download the app on Google Play and start creating visual routines. The iPhone version is being prepared for release on the App Store.",
+      cta: "Download on Google Play",
+      meta: "Available for Android devices.",
+      availability: {
+        android: {
+          title: "Available on Android",
+          description: "Download it now from Google Play.",
+        },
+        ios: {
+          title: "iPhone version",
+          description: "App Store release in progress.",
+        },
+        feedback: {
+          title: "Help improve the app",
+          description: "Send suggestions based on your experience.",
+          cta: "Send feedback",
+        },
       },
-      cta: "I want to test the app",
-      meta: "Opens a Google Forms link in a new tab.",
-      privacyNote:
-        "By joining the validation, you may provide data according to our",
-      privacyLink: "Privacy Policy",
     },
     about: {
       title: "About the project",
@@ -393,8 +405,7 @@ const translations = {
     },
     contact: {
       title: "Contact",
-      subtitle:
-        "Want to participate, suggest improvements, or ask questions? Reach out.",
+      subtitle: "Want to suggest improvements, or ask questions? Reach out.",
       meta: "Opens your default email client.",
       cta: "Send email",
     },
@@ -501,8 +512,14 @@ async function loadPage() {
 }
 
 function initConfigBindings() {
-  const validationLink = document.getElementById("validation-form-link");
-  if (validationLink) validationLink.href = CONFIG.GOOGLE_FORMS_URL;
+  const googlePlayLink = document.getElementById("google-play-link");
+  if (googlePlayLink) googlePlayLink.href = CONFIG.GOOGLE_PLAY_URL;
+
+  const validationFeedbackLink = document.getElementById(
+    "validation-feedback-link",
+  );
+  if (validationFeedbackLink)
+    validationFeedbackLink.href = `mailto:${CONFIG.CONTACT_EMAIL}`;
 
   const contactLink = document.getElementById("contact-email-link");
   if (contactLink) contactLink.href = `mailto:${CONFIG.CONTACT_EMAIL}`;
